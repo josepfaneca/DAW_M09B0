@@ -2,7 +2,6 @@
     box-sizing: border-box;
   }
 
-  
   .format-principal {
     border: 2px solid #2c92f1;
     background-color: #e6f2ff;
@@ -11,8 +10,7 @@
     font: 16px Arial, Helvetica, arial;
     margin: 5px;
   }
-  
-  
+
   .contenedor {
     display: flex;
     min-height: calc(100vh - 40vh);
@@ -48,6 +46,11 @@
   article {
     font: 18px sans-serif, Helvetica, arial;
   }
+  .contingut {
+    border: 2px solid #64a7f0;
+    border-radius: 5px;
+    padding: 10px;
+  }
   .contenedor > article {
     order: 2;
   }
@@ -64,6 +67,7 @@
     height: 60px;
     margin-top: 1px;
   }
+  
   #cercar {
     height: 30px;
     width: auto;
