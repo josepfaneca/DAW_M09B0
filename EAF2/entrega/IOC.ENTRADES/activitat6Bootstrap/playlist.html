@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <!--Jquery-->
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script src="../js/jquery-ui-1.13.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="../js/jquery-ui-1.13.1/jquery-ui.css">
+
+  <!--jPlayer : HTML5 Audio & Video for jQuery-->
+  <script type="text/javascript" src="../dist/jplayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="../dist/add-on/jplayer.playlist.min.js"></script>
+  <link href="../dist/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/playlist.js"></script>
+  <link rel="stylesheet" href="../css/jplayerResponsive.css">
+
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" href="/imatges/favicon.ico" type="image/x-icon" sizes="32x32">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!-- Estils que modifiquen i/o amplien el framework -->
+  <link rel="stylesheet" href="indexBootstrap.css" />
+
+  <title>Playlist</title>
+</head>
+
+<body>
+  <nav class="mi-header navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-5" aria-current="page" href="#">Detall de compra</a>
+          </li>
+        </ul>
+        <form class="d-flex mx-4 mb-3 mb-lg-4">
+          <input class="form-control me-2" type="search" placeholder="Cercar" aria-label="Search" />
+          <a class="btn btn-primary" href="https://getbootstrap.com" role="button">Cercar</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="sc-14z1d11-0 fuIEMC">
+    <div class="sc-i92zt2-0 gFvwKw">
+      <nav class="sc-14z1d11-1 jWkvPa">
+        <div class="sc-14z1d11-2 bUlbED">
+          <ul class="sc-14z1d11-3 fmlHHc">
+            <li data-section="galeria"><a href="#galeria" class="sc-14z1d11-4 bCDLie">Galeria</a></li>
+            <li data-section="info"><a href="#info" class="sc-14z1d11-4 bCDLie">Info</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--video JQuery-->
+  <section class="container-fluid">
+    <div class="row">
+      <article id="articl">
+        <br>
+        <h5>Activitat 4 – Reproductor de vídeo per la web</h5>
+        <p>Playlist</p>
+        <p>1. en primer lloc he clonat de Github el repositori de JPlayer <br>
+          2. he repassat l'exemple de playlist: https://jplayer.org/latest/demo-02-multi/ <br>
+          3. la meva idea és fer el mateix, però amb la meua playlist <br>
+          4. del repositori de Github he copiat i pegat el codi html <br>
+          5. he afegit el arxius js de JPlayer al meu projecte i els he referenciat en el meu html <br>
+          6. he baixat els 3 videos de youtube que formaran la meua playlist i amb el VLC Media Player he convertit de mp4 (m4v) a (ogg) ogv i (webm) webmv <br>
+          7. he prestat atenció al contenedor amb la classe jp-playlist. Aquest contenedor renderitzarà la meua playlist <br>
+          8. he creat un js a partir de l'exemple de la demo. En aquest js he creat he instanciat un objecte de la classe jPlayerPlaylist. Aquesta classe contindrá un array amb els 3 videos de la meua playlist. He seguit el model de la demo, donant valor a cada un dels atributs. <br>
+          9. he afegit un estil amb mediaqueries per tal de fer el jplayer responsive en diferents tamanys de pantalla. He seguit aquest fil: <a href="https://stackoverflow.com/questions/20518520/jplayer-how-to-make-the-audio-player-responsive"> jplayer resposnive</a>
+        </p>
+        <!-- playlist amb jPlayer-->
+        <div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player">
+          <div class="jp-type-playlist">
+            <div id="jquery_jplayer_N" class="jp-jplayer"></div>
+            <div class="jp-gui">
+              <div class="jp-video-play">
+                <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+              </div>
+              <div class="jp-interface">
+                <div class="jp-progress">
+                  <div class="jp-seek-bar">
+                    <div class="jp-play-bar"></div>
+                  </div>
+                </div>
+                <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                <div class="jp-controls-holder">
+                  <div class="jp-controls">
+                    <button class="jp-previous" role="button" tabindex="0">previous</button>
+                    <button class="jp-play" role="button" tabindex="0">play</button>
+                    <button class="jp-next" role="button" tabindex="0">next</button>
+                    <button class="jp-stop" role="button" tabindex="0">stop</button>
+                  </div>
+                  <div class="jp-volume-controls">
+                    <button class="jp-mute" role="button" tabindex="0">mute</button>
+                    <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+                    <div class="jp-volume-bar">
+                      <div class="jp-volume-bar-value"></div>
+                    </div>
+                  </div>
+                  <div class="jp-toggles">
+                    <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+                    <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+                    <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
+                  </div>
+                </div>
+                <div class="jp-details">
+                  <div class="jp-title" aria-label="title">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+            <div class="jp-playlist">
+              <ul>
+                <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+                <li>&nbsp;</li>
+              </ul>
+            </div>
+            <div class="jp-no-solution">
+              <span>Update Required</span>
+              To play the media you will need to either update your browser to a recent version or update your <a
+                href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+            </div>
+          </div>
+        </div>
+        <!--
+        <p style="margin-top:1em;">
+          <code>setPlaylist( <a href="javascript:;" id="playlist-setPlaylist-audio-mix">[Audio Mix]</a> | <a href="javascript:;" id="playlist-setPlaylist-video-mix">[Video Mix]</a> | <a href="javascript:;" id="playlist-setPlaylist-media-mix">[Media Mix]</a> )</code><br />
+
+          Miaow audio:
+          <code>add( <a href="javascript:;" id="playlist-add-bubble">{Bubble}</a> | <a href="javascript:;" id="playlist-add-hidden">{Hidden}</a> | <a href="javascript:;" id="playlist-add-tempered-song">{Tempered Song}</a> | <a href="javascript:;" id="playlist-add-lentement">{Lentement}</a> )</code><br />
+          The Stark Palace audio:
+          <code>add( <a href="javascript:;" id="playlist-add-cro-magnon-man">{Cro Magnon Man}</a> | <a href="javascript:;" id="playlist-add-your-face">{Your Face}</a> | <a href="javascript:;" id="playlist-add-cyber-sonnet">{Cyber Sonnet}</a> )</code><br />
+          Various video:
+          <code>add( <a href="javascript:;" id="playlist-add-big-buck-bunny">{Big Buck Bunny}</a> | <a href="javascript:;" id="playlist-add-incredibles">{Incredibles}</a> | <a href="javascript:;" id="playlist-add-finding-nemo">{Finding Nemo}</a> )</code><br />
+
+          <code><a href="javascript:;" id="playlist-remove">remove</a>(  <a href="javascript:;" id="playlist-remove--2">-2</a> | <a href="javascript:;" id="playlist-remove--1">-1</a> | <a href="javascript:;" id="playlist-remove-0">0</a> | <a href="javascript:;" id="playlist-remove-1">1</a> | <a href="javascript:;" id="playlist-remove-2">2</a> )</code>
+          |
+          <code><a href="javascript:;" id="playlist-shuffle">shuffle</a>( <a href="javascript:;" id="playlist-shuffle-false">false</a> | <a href="javascript:;" id="playlist-shuffle-true">true</a> )</code><br />
+
+          <code>select( <a href="javascript:;" id="playlist-select--2">-2</a> | <a href="javascript:;" id="playlist-select--1">-1</a> | <a href="javascript:;" id="playlist-select-0">0</a> | <a href="javascript:;" id="playlist-select-1">1</a> | <a href="javascript:;" id="playlist-select-2">2</a> )</code>
+          | <code><a href="javascript:;" id="playlist-next">next</a>()</code> |
+          <code><a href="javascript:;" id="playlist-previous">previous</a>()</code><br />
+
+          <code><a href="javascript:;" id="playlist-play">play</a>( <a href="javascript:;" id="playlist-play--2">-2</a> | <a href="javascript:;" id="playlist-play--1">-1</a> | <a href="javascript:;" id="playlist-play-0">0</a> | <a href="javascript:;" id="playlist-play-1">1</a> | <a href="javascript:;" id="playlist-play-2">2</a> )</code>
+          | <code><a href="javascript:;" id="playlist-pause">pause</a>()</code><br />
+
+          <code>option( "autoPlay", <a href="javascript:;" id="playlist-option-autoPlay-false">false</a> | <a href="javascript:;" id="playlist-option-autoPlay-true">true</a> )</code>
+          Default: false<br />
+          <code>option( "enableRemoveControls", <a href="javascript:;" id="playlist-option-enableRemoveControls-false">false</a> | <a href="javascript:;" id="playlist-option-enableRemoveControls-true">true</a> )</code>
+          Default: false<br />
+          <code>option( "displayTime", <a href="javascript:;" id="playlist-option-displayTime-0">0</a> | <a href="javascript:;" id="playlist-option-displayTime-fast">'fast'</a> | <a href="javascript:;" id="playlist-option-displayTime-slow">'slow'</a> | <a href="javascript:;" id="playlist-option-displayTime-2000">2000</a> )</code>
+          Default: 'slow'<br />
+          <code>option( "addTime", <a href="javascript:;" id="playlist-option-addTime-0">0</a> | <a href="javascript:;" id="playlist-option-addTime-fast">'fast'</a> | <a href="javascript:;" id="playlist-option-addTime-slow">'slow'</a> | <a href="javascript:;" id="playlist-option-addTime-2000">2000</a> )</code>
+          Default: 'fast'<br />
+          <code>option( "removeTime", <a href="javascript:;" id="playlist-option-removeTime-0">0</a> | <a href="javascript:;" id="playlist-option-removeTime-fast">'fast'</a> | <a href="javascript:;" id="playlist-option-removeTime-slow">'slow'</a> | <a href="javascript:;" id="playlist-option-removeTime-2000">2000</a> )</code>
+          Default: 'fast'<br />
+          <code>option( "shuffleTime", <a href="javascript:;" id="playlist-option-shuffleTime-0">0</a> | <a href="javascript:;" id="playlist-option-shuffleTime-fast">'fast'</a> | <a href="javascript:;" id="playlist-option-shuffleTime-slow">'slow'</a> | <a href="javascript:;" id="playlist-option-shuffleTime-2000">2000</a> )</code>
+          Default: 'slow'
+
+        </p>
+        <p>
+          Equivalent Effect: <code><a href="javascript:;" id="playlist-equivalent-1-a">add(Your Face, true)</a></code>
+          == <code><a href="javascript:;" id="playlist-equivalent-1-b">add(Your Face) then play(-1)</a></code>
+        </p>
+        <p>
+          Avoid code like: <code><a href="javascript:;" id="playlist-avoid-1">remove(2) then remove(3)</a></code><br />
+          Because the second command will only work if the remove animation time, <code
+            class="prettyprint">removeTime</code>, is zero.
+          Even then, it will look like it removes the 3rd and 5th items from the original playlist before both commands
+          executed.
+          This is because the <code class="prettyprint">remove(2)</code> removes the 3rd item and then <code
+            class="prettyprint">remove(3)</code> removes the 4th item, which was the 5th item before the 3rd item was
+          removed.
+          To remove the 3rd and 4th items, you'd use <code class="prettyprint">remove(2)</code> and then <code
+            class="prettyprint">remove(2)</code> again.
+          The <code class="prettyprint">remove()</code> method returns a <code class="prettyprint">true</code> when
+          successful, a <code class="prettyprint">false</code> when ignored, which allows you to know whether it worked
+          or not.
+        </p>
+        -->
+        <!--playlist-->
+        <br>
+        <div>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+
+  
+  <section class="container-fluid" style="padding-left: 0px;padding-right: 0px;">
+    <footer>
+      <div class="row">
+        <div class="col-sm">
+          <a href="...">
+            <img src="../imatges/rrss.png" class="img-fluid rounded" alt="" />
+          </a>
+        </div>
+        <div class="col-sm">
+          <ul style="font-size:20px; list-style-type:none;">
+            <li><a href="https://getbootstrap.com" style="text-decoration: none;" class="cont ipfQVC">Contacta</a>
+            </li>
+            <li>Ajuda</li>
+            <li>Dubtes Freqüents</li>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul style="font-size:20px">
+            <li>Política privacitat</li>
+            <li>Condicions generals</li>
+            <li>Política cookies</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/video.js"></script>
+</body>
+
+</html>

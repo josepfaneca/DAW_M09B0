@@ -1,0 +1,131 @@
+/* Versión de móvil */
+
+* {
+    margin: 5px;
+    border-radius: 5px;
+    font-family:'Helvetica', Calibri, 'Trebuchet MS', sans-serif;
+}
+html{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: linear-gradient( to bottom, rgb(238, 255, 0), white);
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: rgb(128, 128, 136);
+    }
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-around;
+}
+
+header {
+    background-color: negre;
+    width: 100%;
+    text-align: left;
+}
+
+h1, h2, h3, h4 {
+    width: 100%;
+}
+
+nav {
+    background-color: #ff8000;
+    width: 100%;
+}
+
+nav select {
+    display: inline;
+    background-color: white;
+}
+
+nav ul {
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+main, section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+aside {
+    width: 100%;
+    background-color: #00d0ff;
+}
+
+.categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.ofertes article {
+    background-color: #4000ff;
+    width: 100%;
+    color: white;
+}
+
+.categories article {
+    background-color: #1eb16c;
+    width: 47%;
+    color: white;
+}
+
+footer {
+    background-color: #e97db1;
+    width: 100%;
+}
+
+/* Versión de tablet o desktop */
+
+@media screen and (min-width: 936px) {
+    nav {
+        width: 100%;
+        height: 40px;
+    }
+    nav select {
+        display: none;
+    }
+    nav ul, nav ul li {
+        display: inline;
+    }
+    main {
+        width: 70%;
+    }
+    aside {
+        display: block;
+        width: 25%;
+        height: 315px;
+        background-color: #00d0ff;
+    }
+    .ofertes {
+        flex-direction: row;
+    }
+    .ofertes article {
+        width: 46%;
+    }
+    .categories article {
+        width: 22%;
+    }
+}

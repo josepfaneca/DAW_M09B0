@@ -1,0 +1,225 @@
+/*
+extret del codi https://codepen.io/bennettfeely/pen/AgbQRQ
+*/
+h3 {
+  text-transform: uppercase;
+
+}
+
+h3 span {
+  display: inline-block;
+  animation: float .2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: none;
+  }
+
+  33% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+
+  66% {
+    transform: translateY(1px) rotate(2deg);
+  }
+}
+
+h3:hover span {
+  animation: bounce .6s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+
+span:nth-child(4n) {
+  color: hsl(280, 35%, 48%);
+  text-shadow: 1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%);
+}
+
+span:nth-child(4n-1) {
+  color: hsl(135, 71%, 22%);
+  text-shadow: 1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%);
+}
+
+span:nth-child(4n-2) {
+  color: hsl(155, 35%, 60%);
+  text-shadow: 1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%);
+}
+
+span:nth-child(4n-3) {
+  color: hsl(30, 65%, 60%);
+  text-shadow: 1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%);
+}
+
+h3 span:nth-child(2) {
+  animation-delay: .05s;
+}
+
+h3 span:nth-child(3) {
+  animation-delay: .1s;
+}
+
+h3 span:nth-child(4) {
+  animation-delay: .15s;
+}
+
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-2deg);
+  }
+
+  20% {
+    transform: rotate(1deg);
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(-2deg);
+  }
+
+  80% {
+    transform: rotate(2deg);
+  }
+
+  90% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+
+@keyframes rebot {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 100px;
+  }
+}
+
+.fade-in-text {
+  display: inline-block;
+  color: #363434;
+  animation: fadeIn linear 4s;
+  font-family: Averta, helvetica, arial, sans-serif;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+}
+
+.image1:hover {
+  filter: opacity(.5);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+
+
+}
+
+.image1{
+    /*animacio barça*/
+    animation: rotacio;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotacio {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.image2:hover{
+  filter: opacity(.5);
+
+}
+
+.image2 {
+  /* animació Rosalia*/
+  position: relative; /*!important sense això, no és mou*/
+  animation-name: movement;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+}
+
+@keyframes movement {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+/*extret de https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations
+animació del paràgraf */
+p {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+$color__nav--prim: #234;
+$color__nav--scnd: #238;
+
+#nav {
+  > ul {
+    list-style: none;
+    > li {
+      width: 10em;
+      float: left;
+      ul {
+        list-style: none;
+        position: absolute;
+        left: -9999em;      //to make things as accessible as possible, avoid using display:none
+        a {
+          background: $color__nav--scnd;
+          border-radius: 3px;
+          &:hover,
+          &:focus {
+           background: complement($color__nav--scnd);
+          }
+        }
+      }
+      &:hover,
+      &.hover {
+        ul {
+          left: auto;
+          padding: 0;
+          margin: 0
+        }
+        > a {
+           background: complement($color__nav--prim);
+        }
+      }
+    }
+    a {
+      display: block;
+      width: 10em;
+      height: 3em;
+      text-decoration: none;
+      text-align: center;
+      background: $color__nav--prim;
+      color: white;
+      padding-top: 1em;
+      border: 1px solid white;
+    }
+  }
+}

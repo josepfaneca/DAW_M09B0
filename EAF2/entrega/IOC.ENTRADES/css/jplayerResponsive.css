@@ -1,0 +1,24 @@
+@media screen and (max-width: 500px) {
+
+    /* jplayer */
+    .jp-jplayer, .jp-video video, .jp-audio, .jp-controls-holder {
+        width: 100% !important;
+    }
+
+    .jp-jplayer, .jp-video, .jp-video > div, .jp-video img {
+       height: auto !important;
+       width: 100% !important;
+   }
+
+   .jp-video-360p {
+       max-width: 570px !important;
+   }
+
+   .jp-video-270p {
+       max-width: 480px !important;
+   }
+
+   .jp-progress {
+       width: 130px;
+   }
+}

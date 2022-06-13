@@ -1,0 +1,62 @@
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAF1</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #a {
+            background-color: red;
+            width: 30%;
+            display: inline;
+            flex-direction: column;
+
+
+        }
+
+        #b {
+            background-color: green;
+            width: 100%;
+            flex-direction: row;
+
+
+        }
+
+        #c {
+            background-color: blue;
+            width: 70%;
+
+        }
+
+        #d {
+            background-color: yellow;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-container" id="a">Primer</div>
+        <div id="b">segon</div>
+        <div id="c">tercer</div>
+        <div id="d">ultim</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+body {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.box {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    color: black;
+    margin: 0px;
+    font-size: 1em;
+    text-align: left;
+    border: 2px solid black;
+    margin-top: 10px;
+  }
+
+  #one {
+    width: 25%;
+    height: 25%;
+    background: rgb(255, 0, 0);
+  }
+
+  #two {
+
+    top: 25%;
+    width: 25%;
+    height: 25%;
+    background: blue;
+  }
+
+  #three {
+
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: green;
+    text-align: center;
+  }
+
+  #four {
+
+    top: 50%;
+    width: 75%;
+    height: 15%;
+    background: yellow;
+    left: 0px;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  #five {
+    top: 65%;
+    width: 75%;
+    height: 30%;
+    background: grey;
+    left: 0px;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  #six {
+    top: 0%;
+    width: 10%;
+    height: 95%;
+    background: rgb(7, 223, 247);
+    left: 75%;
+    text-align: center;
+
+  }
+
+  
+
+
+
+
+

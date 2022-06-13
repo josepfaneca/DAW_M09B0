@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 95%;
+  margin: auto;
+  /* Flexbox */
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header {
+  border: 2px solid #cce6ff;
+  border-radius: 5px;
+  background-color: #99ccff;
+  font: 18px sans-serif, Helvetica, arial;
+  margin-top: 10px;
+  width: 100%;
+  padding: 20px;
+  /* Flexbox */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main {
+  margin-top: 5px;
+  background-color: #e6f2ff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1 1 70%;
+  /*flex:1;*/
+}
+
+.contingut {
+  font: 18px sans-serif, Helvetica, arial;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-basis: 100%;
+  flex: 10;
+}
+
+.contingut > div {
+  flex: 1 1 auto;
+  border: 1px rgb(0, 4, 255) solid;
+  padding: 0.5em;
+  text-align: left;
+  margin: 15px; /* and that, will result in a 10px gap */
+}
+
+aside {
+  padding: 20px;
+  /*FLEX*/
+  flex: 1 1 30%;
+  /*flex:0 0 300px;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+aside > h1 {
+  border: 1px solid blue;
+  border-radius: 5px;
+  height: 50px;
+  padding: 10px;
+  
+}
+
+ul {
+  /*remove bullets*/
+  list-style-type: none;
+  
+}
+
+aside > ul > li {
+  border: 1px solid blue;
+  border-radius: 5px;
+  height: 150px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+footer {
+	background:#868e96;
+	width: 100%;
+	padding:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+    align-items: baseline;
+}
+
+/*Mobile First: media queries*/
+@media screen and (max-width: 800px) {
+    .contenedor {
+        flex-direction:column;
+    }
+
+    header {
+        flex-direction:row;
+        padding:0;
+    }
+
+    aside {
+		flex-direction:row;
+		flex:0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+    aside {
+        flex-direction:column;
+    }
+
+    footer {
+        flex-direction:row;
+        align-items: baseline;
+        justify-content:space-between;
+    }
+}

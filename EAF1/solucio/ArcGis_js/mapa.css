@@ -1,0 +1,12 @@
+html,
+body,
+#viewDiv {
+    margin: 1rem;
+    height: 95%;
+    width: 100%;
+}
+
+#viewDiv{
+    width: 70%!important;
+    width: 90%!important;
+}

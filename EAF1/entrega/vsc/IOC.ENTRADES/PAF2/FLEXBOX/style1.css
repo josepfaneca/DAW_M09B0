@@ -1,0 +1,50 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+    height: 100vh;
+
+}
+
+.box {
+    border: 1px solid grey; 
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+#one {
+    background-color: blue;
+    grid-column: 4 / 6;
+    grid-row: 1 / 8;
+}
+
+#two {
+    background-color: red;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+}
+
+#three {
+    background-color: green;
+    grid-column: 1 / 4;
+    grid-row: 5 / 8;
+}
+
+#four {
+    background-color: violet;
+    grid-column: 6 / 8;
+    grid-row: 1 / 8;
+}
+
+#five {
+    background-color: goldenrod;
+    grid-column: 1 / 8;
+    grid-row: 8 / 10;
+}
+
+#six {
+    background-color: aqua;
+    grid-column: 8 / 9;
+    grid-row: 1 / 10;
+}
